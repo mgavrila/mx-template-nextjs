@@ -28,6 +28,7 @@ export default function App({ children }: Readonly<{ children: ReactNode }>) {
     initializeApp();
   }, []); // Runs only once when the component mounts
 
+  console.log({ isInitialized });
   // Optionally, show a loading indicator while initializing
   if (!isInitialized) {
     return <div>Loading...</div>; // or any loading spinner

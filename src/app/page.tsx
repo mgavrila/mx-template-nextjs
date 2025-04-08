@@ -1,20 +1,13 @@
-'use client';
 import { AuthRedirectWrapper, PageWrapper } from '@/wrappers';
-import { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
 
-export default function Home({
-  searchParams
-}: Readonly<{
-  searchParams?: { [key: string]: string | string[] | undefined };
-}>) {
-  const router = useRouter();
+export default function Home() {
+  // const router = useRouter();
 
-  useEffect(() => {
-    if (searchParams && Object.keys(searchParams).length > 0) {
-      router.replace('/');
-    }
-  }, [router, searchParams]);
+  // useEffect(() => {
+  //   if (searchParams && Object.keys(searchParams).length > 0) {
+  //     router.replace('/');
+  //   }
+  // }, [router, searchParams]);
 
   return (
     <AuthRedirectWrapper requireAuth={false}>
